@@ -41,7 +41,7 @@ class Canvas
 
   initElements: ->
     @cube = new Cube(
-      prompt('Какая шырина куба вам?'),
+      prompt('Какая ширина куба вам?'),
       prompt('Какая высота куба вам?'),
       prompt('Какая глубина куба вам?')
     )

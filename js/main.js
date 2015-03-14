@@ -41,7 +41,7 @@ Canvas = (function() {
   };
 
   Canvas.prototype.initElements = function() {
-    this.cube = new Cube(prompt('Какая шырина куба вам?'), prompt('Какая высота куба вам?'), prompt('Какая глубина куба вам?')).getCube();
+    this.cube = new Cube(prompt('Какая ширина куба вам?'), prompt('Какая высота куба вам?'), prompt('Какая глубина куба вам?')).getCube();
     this.scene.add(this.cube);
     this.line = new Line(this.cube.geometry.parameters).getLine();
     return this.scene.add(this.line);
