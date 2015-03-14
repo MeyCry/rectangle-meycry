@@ -59,10 +59,8 @@ class Canvas
       requestAnimationFrame(@render.bind @)
       # start animaiton tick
 
-#      @cube.rotation.x += 0.02
       @cube.rotation.y += 0.0025
       @line.rotation.y += 0.0025
-#      @cube.rotation.z += 0.0175
 
       # end
       @renderer.render(@scene, @camera)
