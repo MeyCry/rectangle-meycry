@@ -95,14 +95,11 @@ class Line
 
     console.log cubeSize
 
-#    geometry = new THREE.BoxGeometry( formule(cubeSize), 5, 5 );
-
     geometry = new THREE.Geometry();
     geometry.vertices.push(new THREE.Vector3(cubeSize.width/2, cubeSize.height/2, cubeSize.depth/2));
     geometry.vertices.push(new THREE.Vector3(-(cubeSize.width/2), -(cubeSize.height/2), -(cubeSize.depth/2)));
 
     line = new THREE.Line(geometry, material);
-#    line.rotation.y = 200
 
     alert("Длинна линии: "+formule(cubeSize))
 
