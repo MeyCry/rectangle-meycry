@@ -1,9 +1,20 @@
-formule = (obj) ->
+lengthOfLine = (obj) ->
   height = obj.height
   width = obj.width
 
   Math.sqrt(Math.pow(height,2) + Math.pow(width, 2))
 
+a = (obj) ->
+  height = obj.height
+  width = obj.width
+
+  Math.atan(height/width) * 180 / Math.PI
+
+b = (obj) ->
+  height = obj.height
+  width = obj.width
+
+  90 - (Math.atan(height/width) * 180 / Math.PI)
 
 class Canvas
   constructor: (@width, @height, @element) ->
@@ -99,7 +110,8 @@ class Line
 
     line = new THREE.Line(geometry, material);
 
-    alert("Длинна линии: "+formule(cubeSize))
+    alert("Длинна линии: "+lengthOfLine(cubeSize))
+    alert("Угол линии: "+a(cubeSize))
 
   getLine: -> line
 
